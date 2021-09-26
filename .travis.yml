@@ -1,10 +1,10 @@
 sudo: required
 services:
-  -docer
+  -docker
 
 
 before_install:
-  - dokcer build -t jimmyleu/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t jimmyleu/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true jimmyleu/react-test npm test -- --coverage
@@ -15,4 +15,3 @@ after_success:
   - docker build -t jimmyleu/multi-nginx ./nginx
   - docker build -t jimmyleu/multi-server ./server
   - docker build -t jimmyleu/multi-worker ./worker
-  
