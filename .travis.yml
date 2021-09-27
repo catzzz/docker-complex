@@ -29,7 +29,7 @@ deploy:
   app: ' Multi-container-docker'
   env: 'Multicontainerdocker-env-1'
   bucket_name: 'elasticbeanstalk-us-west-1-769457324205'
-  bucket_path: 'docker-multi'
+  bucket_path: 'Multi-container-docker'
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
